@@ -17,7 +17,6 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'mobile' => 'required',
-            'image' => 'required',
             'dob' => 'required',
             'password' => 'required'
         ]);
@@ -89,7 +88,9 @@ class UserController extends Controller
             $file = $request->file('image');
             $filename = time() . "-" . $file->hashName();
             $file->move('user-profile/', $filename);
-            $user_profile->image_path = "user-profile/" . $filename;
+            $user_profile->image = "user-profile/" . $filename;
+        } else {
+            $user_profile->image = "user-profile/default.png";
         }
         $user_profile->save();
         return response()->json([
