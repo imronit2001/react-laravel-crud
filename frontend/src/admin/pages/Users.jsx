@@ -18,7 +18,9 @@ const Users = () => {
         console.log(data);
         setUsers(data.data);
         document.getElementById("loading").innerHTML = "";
-        document.getElementById("total-user").innerHTML = `(${users.length})`;
+        document.getElementById(
+          "total-user"
+        ).innerHTML = `(${data.data.length})`;
       });
   };
   useEffect(() => {
