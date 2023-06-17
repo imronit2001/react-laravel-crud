@@ -62,7 +62,7 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <form class="d-flex justify-content-center">
+            <form className="d-flex justify-content-center">
               <p className="text-white m-auto px-2">
                 <i>Created by : </i>
                 <span className="blockquote">Ronit Singh</span>

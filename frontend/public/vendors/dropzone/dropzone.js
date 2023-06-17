@@ -12,11 +12,11 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () { })); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() { }; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
@@ -88,7 +88,7 @@ var Emitter = /*#__PURE__*/function () {
         }
 
         var _iterator = _createForOfIteratorHelper(callbacks),
-            _step;
+          _step;
 
         try {
           for (_iterator.s(); !(_step = _iterator.n()).done;) {
@@ -516,7 +516,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
          * Called when dropzone initialized
          * You can add event listeners here
          */
-        init: function init() {},
+        init: function init() { },
 
         /**
          * Can be an **object** of additional parameters to transfer to the server, **or** a `Function`
@@ -575,7 +575,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
           this.element.className = "".concat(this.element.className, " dz-browser-not-supported");
 
           var _iterator2 = _createForOfIteratorHelper(this.element.getElementsByTagName("div")),
-              _step2;
+            _step2;
 
           try {
             for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
@@ -723,7 +723,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         drop: function drop(e) {
           return this.element.classList.remove("dz-drag-hover");
         },
-        dragstart: function dragstart(e) {},
+        dragstart: function dragstart(e) { },
         dragend: function dragend(e) {
           return this.element.classList.remove("dz-drag-hover");
         },
@@ -736,7 +736,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         dragleave: function dragleave(e) {
           return this.element.classList.remove("dz-drag-hover");
         },
-        paste: function paste(e) {},
+        paste: function paste(e) { },
         // Called whenever there are no files left in the dropzone anymore, and the
         // dropzone should be displayed as if in the initial state.
         reset: function reset() {
@@ -758,7 +758,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             this.previewsContainer.appendChild(file.previewElement);
 
             var _iterator3 = _createForOfIteratorHelper(file.previewElement.querySelectorAll("[data-dz-name]")),
-                _step3;
+              _step3;
 
             try {
               for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
@@ -772,7 +772,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             }
 
             var _iterator4 = _createForOfIteratorHelper(file.previewElement.querySelectorAll("[data-dz-size]")),
-                _step4;
+              _step4;
 
             try {
               for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
@@ -810,7 +810,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             };
 
             var _iterator5 = _createForOfIteratorHelper(file.previewElement.querySelectorAll("[data-dz-remove]")),
-                _step5;
+              _step5;
 
             try {
               for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
@@ -839,7 +839,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             file.previewElement.classList.remove("dz-file-preview");
 
             var _iterator6 = _createForOfIteratorHelper(file.previewElement.querySelectorAll("[data-dz-thumbnail]")),
-                _step6;
+              _step6;
 
             try {
               for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
@@ -869,7 +869,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             }
 
             var _iterator7 = _createForOfIteratorHelper(file.previewElement.querySelectorAll("[data-dz-errormessage]")),
-                _step7;
+              _step7;
 
             try {
               for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
@@ -883,7 +883,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             }
           }
         },
-        errormultiple: function errormultiple() {},
+        errormultiple: function errormultiple() { },
         // Called when a file gets processed. Since there is a cue, not all added
         // files are processed immediately.
         // Receives `file`
@@ -896,14 +896,14 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             }
           }
         },
-        processingmultiple: function processingmultiple() {},
+        processingmultiple: function processingmultiple() { },
         // Called whenever the upload progress gets updated.
         // Receives `file`, `progress` (percentage 0-100) and `bytesSent`.
         // To get the total number of bytes of the file, use `file.size`
         uploadprogress: function uploadprogress(file, progress, bytesSent) {
           if (file.previewElement) {
             var _iterator8 = _createForOfIteratorHelper(file.previewElement.querySelectorAll("[data-dz-uploadprogress]")),
-                _step8;
+              _step8;
 
             try {
               for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
@@ -919,12 +919,12 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         },
         // Called whenever the total upload progress gets updated.
         // Called with totalUploadProgress (0-100), totalBytes and totalBytesSent
-        totaluploadprogress: function totaluploadprogress() {},
+        totaluploadprogress: function totaluploadprogress() { },
         // Called just before the file is sent. Gets the `xhr` object as second
         // parameter, so you can modify it (for example to add a CSRF token) and a
         // `formData` object to add additional information.
-        sending: function sending() {},
-        sendingmultiple: function sendingmultiple() {},
+        sending: function sending() { },
+        sendingmultiple: function sendingmultiple() { },
         // When the complete upload is finished and successful
         // Receives `file`
         success: function success(file) {
@@ -932,12 +932,12 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             return file.previewElement.classList.add("dz-success");
           }
         },
-        successmultiple: function successmultiple() {},
+        successmultiple: function successmultiple() { },
         // When the upload is canceled.
         canceled: function canceled(file) {
           return this.emit("error", file, this.options.dictUploadCanceled);
         },
-        canceledmultiple: function canceledmultiple() {},
+        canceledmultiple: function canceledmultiple() { },
         // When the upload is finished, either with success or an error.
         // Receives `file`
         complete: function complete(file) {
@@ -949,11 +949,11 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             return file.previewElement.classList.add("dz-complete");
           }
         },
-        completemultiple: function completemultiple() {},
-        maxfilesexceeded: function maxfilesexceeded() {},
-        maxfilesreached: function maxfilesreached() {},
-        queuecomplete: function queuecomplete() {},
-        addedfiles: function addedfiles() {}
+        completemultiple: function completemultiple() { },
+        maxfilesexceeded: function maxfilesexceeded() { },
+        maxfilesreached: function maxfilesreached() { },
+        queuecomplete: function queuecomplete() { },
+        addedfiles: function addedfiles() { }
       };
       this.prototype._thumbnailQueue = [];
       this.prototype._processingThumbnail = false;
@@ -1189,7 +1189,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
 
             if (files.length) {
               var _iterator9 = _createForOfIteratorHelper(files),
-                  _step9;
+                _step9;
 
               try {
                 for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
@@ -1218,7 +1218,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       // again when the dropzone gets disabled.
 
       var _iterator10 = _createForOfIteratorHelper(this.events),
-          _step10;
+        _step10;
 
       try {
         for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
@@ -1296,7 +1296,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
 
             try {
               efct = e.dataTransfer.effectAllowed;
-            } catch (error) {}
+            } catch (error) { }
 
             e.dataTransfer.dropEffect = 'move' === efct || 'linkMove' === efct ? 'move' : 'copy';
             noPropagation(e);
@@ -1362,7 +1362,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
 
       if (activeFiles.length) {
         var _iterator11 = _createForOfIteratorHelper(this.getActiveFiles()),
-            _step11;
+          _step11;
 
         try {
           for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
@@ -1446,7 +1446,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     value: function getExistingFallback() {
       var getFallback = function getFallback(elements) {
         var _iterator12 = _createForOfIteratorHelper(elements),
-            _step12;
+          _step12;
 
         try {
           for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
@@ -1620,7 +1620,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     key: "handleFiles",
     value: function handleFiles(files) {
       var _iterator13 = _createForOfIteratorHelper(files),
-          _step13;
+        _step13;
 
       try {
         for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
@@ -1644,7 +1644,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         var result = [];
 
         var _iterator14 = _createForOfIteratorHelper(items),
-            _step14;
+          _step14;
 
         try {
           for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
@@ -1697,7 +1697,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         return dirReader.readEntries(function (entries) {
           if (entries.length > 0) {
             var _iterator15 = _createForOfIteratorHelper(entries),
-                _step15;
+              _step15;
 
             try {
               for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
@@ -1800,7 +1800,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     key: "enqueueFiles",
     value: function enqueueFiles(files) {
       var _iterator16 = _createForOfIteratorHelper(files),
-          _step16;
+        _step16;
 
       try {
         for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
@@ -1890,7 +1890,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       }
 
       var _iterator17 = _createForOfIteratorHelper(this.files.slice()),
-          _step17;
+        _step17;
 
       try {
         for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
@@ -2140,7 +2140,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     key: "processFiles",
     value: function processFiles(files) {
       var _iterator18 = _createForOfIteratorHelper(files),
-          _step18;
+        _step18;
 
       try {
         for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
@@ -2183,7 +2183,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         var groupedFiles = this._getFilesWithXhr(file.xhr);
 
         var _iterator19 = _createForOfIteratorHelper(groupedFiles),
-            _step19;
+          _step19;
 
         try {
           for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
@@ -2201,7 +2201,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         }
 
         var _iterator20 = _createForOfIteratorHelper(groupedFiles),
-            _step20;
+          _step20;
 
         try {
           for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
@@ -2371,7 +2371,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       var xhr = new XMLHttpRequest(); // Put the xhr object in the file objects to be able to reference it later.
 
       var _iterator21 = _createForOfIteratorHelper(files),
-          _step21;
+        _step21;
 
       try {
         for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
@@ -2461,7 +2461,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
 
 
       var _iterator22 = _createForOfIteratorHelper(files),
-          _step22;
+        _step22;
 
       try {
         for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
@@ -2520,7 +2520,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
       // Take care of other input elements
       if (this.element.tagName === "FORM") {
         var _iterator23 = _createForOfIteratorHelper(this.element.querySelectorAll("input, textarea, select, button")),
-            _step23;
+          _step23;
 
         try {
           for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
@@ -2534,7 +2534,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
             if (input.tagName === "SELECT" && input.hasAttribute("multiple")) {
               // Possibly multiple values
               var _iterator24 = _createForOfIteratorHelper(input.options),
-                  _step24;
+                _step24;
 
               try {
                 for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
@@ -2579,8 +2579,8 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
           chunk.total = e.total;
           chunk.bytesSent = e.loaded;
           var fileProgress = 0,
-              fileTotal,
-              fileBytesSent;
+            fileTotal,
+            fileBytesSent;
           file.upload.progress = 0;
           file.upload.total = 0;
           file.upload.bytesSent = 0;
@@ -2596,7 +2596,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
           file.upload.progress = file.upload.progress / file.upload.totalChunkCount;
         } else {
           var _iterator25 = _createForOfIteratorHelper(files),
-              _step25;
+            _step25;
 
           try {
             for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
@@ -2613,7 +2613,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         }
 
         var _iterator26 = _createForOfIteratorHelper(files),
-            _step26;
+          _step26;
 
         try {
           for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
@@ -2631,7 +2631,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         progress = 100;
 
         var _iterator27 = _createForOfIteratorHelper(files),
-            _step27;
+          _step27;
 
         try {
           for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
@@ -2656,7 +2656,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
         }
 
         var _iterator28 = _createForOfIteratorHelper(files),
-            _step28;
+          _step28;
 
         try {
           for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
@@ -2740,7 +2740,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     key: "_finished",
     value: function _finished(files, responseText, e) {
       var _iterator29 = _createForOfIteratorHelper(files),
-          _step29;
+        _step29;
 
       try {
         for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
@@ -2770,7 +2770,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     key: "_errorProcessing",
     value: function _errorProcessing(files, message, xhr) {
       var _iterator30 = _createForOfIteratorHelper(files),
-          _step30;
+        _step30;
 
       try {
         for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
@@ -2799,7 +2799,7 @@ var Dropzone = /*#__PURE__*/function (_Emitter) {
     value: function uuidv4() {
       return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         var r = Math.random() * 16 | 0,
-            v = c === 'x' ? r : r & 0x3 | 0x8;
+          v = c === 'x' ? r : r & 0x3 | 0x8;
         return v.toString(16);
       });
     }
@@ -2822,7 +2822,7 @@ Dropzone.version = "5.7.2"; // This is a map of options for your different dropz
 //
 // And in html:
 //
-//     <form action="/upload" id="my-dropzone-element-id" class="dropzone"></form>
+//     <form action="/upload" id="my-dropzone-element-id" className="dropzone"></form>
 
 Dropzone.options = {}; // Returns the options for an element or undefined if none available.
 
@@ -2866,7 +2866,7 @@ Dropzone.discover = function () {
         var result = [];
 
         var _iterator31 = _createForOfIteratorHelper(elements),
-            _step31;
+          _step31;
 
         try {
           for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
@@ -2896,7 +2896,7 @@ Dropzone.discover = function () {
     var result = [];
 
     var _iterator32 = _createForOfIteratorHelper(dropzones),
-        _step32;
+      _step32;
 
     try {
       for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
@@ -2931,7 +2931,7 @@ Dropzone.discover = function () {
 
 
 Dropzone.blacklistedBrowsers = [// The mac os and windows phone version of opera 12 seems to have a problem with the File drag'n'drop API.
-/opera.*(Macintosh|Windows Phone).*version\/12/i]; // Checks if the browser is supported
+  /opera.*(Macintosh|Windows Phone).*version\/12/i]; // Checks if the browser is supported
 
 Dropzone.isBrowserSupported = function () {
   var capableBrowser = true;
@@ -2942,7 +2942,7 @@ Dropzone.isBrowserSupported = function () {
     } else {
       // The browser supports the API, but may be blacklisted.
       var _iterator33 = _createForOfIteratorHelper(Dropzone.blacklistedBrowsers),
-          _step33;
+        _step33;
 
       try {
         for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
@@ -3049,7 +3049,7 @@ Dropzone.getElements = function (els, name) {
 
     try {
       var _iterator34 = _createForOfIteratorHelper(els),
-          _step34;
+        _step34;
 
       try {
         for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
@@ -3068,7 +3068,7 @@ Dropzone.getElements = function (els, name) {
     elements = [];
 
     var _iterator35 = _createForOfIteratorHelper(document.querySelectorAll(els)),
-        _step35;
+      _step35;
 
     try {
       for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
@@ -3117,7 +3117,7 @@ Dropzone.isValidFile = function (file, acceptedFiles) {
   var baseMimeType = mimeType.replace(/\/.*$/, "");
 
   var _iterator36 = _createForOfIteratorHelper(acceptedFiles),
-      _step36;
+    _step36;
 
   try {
     for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
@@ -3196,7 +3196,7 @@ var detectVerticalSquash = function detectVerticalSquash(img) {
   ctx.drawImage(img, 0, 0);
 
   var _ctx$getImageData = ctx.getImageData(1, 0, 1, ih),
-      data = _ctx$getImageData.data; // search image edge pixel position in case it is squashed vertically.
+    data = _ctx$getImageData.data; // search image edge pixel position in case it is squashed vertically.
 
 
   var sy = 0;
@@ -3472,7 +3472,7 @@ var contentLoaded = function contentLoaded(win, fn) {
     if (doc.createEventObject && root.doScroll) {
       try {
         top = !win.frameElement;
-      } catch (error) {}
+      } catch (error) { }
 
       if (top) {
         poll();

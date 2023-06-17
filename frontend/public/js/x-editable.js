@@ -1,14 +1,14 @@
-(function($) {
+(function ($) {
   'use strict';
-  $(function() {
+  $(function () {
     if ($('#editable-form').length) {
       $.fn.editable.defaults.mode = 'inline';
       $.fn.editableform.buttons =
-        '<button type="submit" class="btn btn-primary btn-sm editable-submit">' +
-        '<i class="fa fa-fw fa-check"></i>' +
+        '<button type="submit" className="btn btn-primary btn-sm editable-submit">' +
+        '<i className="fa fa-fw fa-check"></i>' +
         '</button>' +
-        '<button type="button" class="btn btn-default btn-sm editable-cancel">' +
-        '<i class="fa fa-fw fa-times"></i>' +
+        '<button type="button" className="btn btn-default btn-sm editable-cancel">' +
+        '<i className="fa fa-fw fa-times"></i>' +
         '</button>';
       $('#username').editable({
         type: 'text',
@@ -18,20 +18,20 @@
       });
 
       $('#firstname').editable({
-        validate: function(value) {
+        validate: function (value) {
           if ($.trim(value) === '') return 'This field is required';
         }
       });
 
       $('#sex').editable({
         source: [{
-            value: 1,
-            text: 'Male'
-          },
-          {
-            value: 2,
-            text: 'Female'
-          }
+          value: 1,
+          text: 'Male'
+        },
+        {
+          value: 2,
+          text: 'Female'
+        }
         ]
       });
 
@@ -59,7 +59,7 @@
       $('#meeting_start').editable({
         format: 'yyyy-mm-dd hh:ii',
         viewformat: 'dd/mm/yyyy hh:ii',
-        validate: function(v) {
+        validate: function (v) {
           if (v && v.getDate() === 10) return 'Day cant be 10!';
         },
         datetimepicker: {
@@ -73,7 +73,7 @@
       });
 
       $('#note').editable();
-      $('#pencil').on("click", function(e) {
+      $('#pencil').on("click", function (e) {
         e.stopPropagation();
         e.preventDefault();
         $('#note').editable('toggle');
@@ -95,25 +95,25 @@
         pk: 1,
         limit: 3,
         source: [{
-            value: 1,
-            text: 'banana'
-          },
-          {
-            value: 2,
-            text: 'peach'
-          },
-          {
-            value: 3,
-            text: 'apple'
-          },
-          {
-            value: 4,
-            text: 'watermelon'
-          },
-          {
-            value: 5,
-            text: 'orange'
-          }
+          value: 1,
+          text: 'banana'
+        },
+        {
+          value: 2,
+          text: 'peach'
+        },
+        {
+          value: 3,
+          text: 'apple'
+        },
+        {
+          value: 4,
+          text: 'watermelon'
+        },
+        {
+          value: 5,
+          text: 'orange'
+        }
         ]
       });
 
@@ -132,10 +132,10 @@
           street: "Lenina",
           building: "12"
         },
-        validate: function(value) {
+        validate: function (value) {
           if (value.city === '') return 'city is required!';
         },
-        display: function(value) {
+        display: function (value) {
           if (!value) {
             $(this).empty();
             return;
@@ -145,11 +145,11 @@
         }
       });
 
-      $('#user .editable').on('hidden', function(e, reason) {
+      $('#user .editable').on('hidden', function (e, reason) {
         if (reason === 'save' || reason === 'nochange') {
           var $next = $(this).closest('tr').next().find('.editable');
           if ($('#autoopen').is(':checked')) {
-            setTimeout(function() {
+            setTimeout(function () {
               $next.editable('show');
             }, 300);
           } else {
